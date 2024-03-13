@@ -13,7 +13,7 @@ drive.mount('/content/drive')
 """# **Image**"""
 
 #pip install jupyter-dash
-git clone https://github.com/shubhamlad21/dlon_sl.git dlon
+#git clone https://github.com/shubhamlad21/dlon_sl.git dlon
 
 cd dlon
 
@@ -24,15 +24,15 @@ import torch
 if not torch.cuda.is_available():
     print('GPU not available.')
 
-!pip install -r requirements-colab.txt
+pip install -r requirements-colab.txt
 
 import fastai
 from dlon.visualize import *
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*?Your .*? set is empty.*?")
 
-!mkdir 'models'
-!wget https://www.dropbox.com/scl/fi/a20jp8dagw7y8nuzikq07/ColorizeArtistic_gen.pth -O ./models/ColorizeArtistic_gen.pth
+mkdir 'models'
+wget https://www.dropbox.com/scl/fi/a20jp8dagw7y8nuzikq07/ColorizeArtistic_gen.pth -O ./models/ColorizeArtistic_gen.pth
 
 mv ColorizeArtistic_gen.pth* /content/dlon/models/ColorizeArtistic_gen.pth
 
@@ -58,8 +58,8 @@ for i in range(40,41,1):
 
 """# **Video**"""
 
-!mkdir 'models'
-!wget https://www.dropbox.com/scl/fi/ksfr8b0q2kfcdxxhfei2c/ColorizeVideo_gen.pth?rlkey=ub9cf9hberniwtxkhgeyclyzm&dl=0 -O ./models/ColorizeVideo_gen.pth
+mkdir 'models'
+wget https://www.dropbox.com/scl/fi/ksfr8b0q2kfcdxxhfei2c/ColorizeVideo_gen.pth?rlkey=ub9cf9hberniwtxkhgeyclyzm&dl=0 -O ./models/ColorizeVideo_gen.pth
 
 mv ColorizeVideo_gen.pth* /content/dlon/models/ColorizeVideo_gen.pth
 
